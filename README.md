@@ -1,0 +1,2 @@
+# Projeto-de-Business-Intelligence---UBS-na-Regiao-de-Betim
+Projeto prático de Business Intelligence focado na análise da distribuição, infraestrutura e atendimentos das Unidades Básicas de Saúde (UBS) na região de Betim - MG. Desenvolvido no Power BI, incluindo etapas de tratamento de dados (ETL) e modelagem para geração de dashboards interativos e indicadores estratégicos da atenção primária à saúde.
