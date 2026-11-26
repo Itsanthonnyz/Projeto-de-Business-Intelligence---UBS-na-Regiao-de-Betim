@@ -8,7 +8,7 @@ export const LINKS = {
   powerBI: '',
 
   // Link público do mapa ArcGIS (ArcGIS Online / StoryMaps / Web App).
-  arcGIS: '',
+  arcGIS: 'https://www.arcgis.com/apps/instant/exhibit/index.html?appid=f77fc2dc73cf4335b82627ce79d1ea0d',
 
   // (Opcional) repositório do projeto
   repositorio: 'https://github.com/Itsanthonnyz/Projeto-de-Business-Intelligence---UBS-na-Regiao-de-Betim',
