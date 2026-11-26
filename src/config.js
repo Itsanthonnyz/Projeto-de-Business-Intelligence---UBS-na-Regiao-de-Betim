@@ -11,7 +11,7 @@ export const LINKS = {
   arcGIS: '',
 
   // (Opcional) repositório do projeto
-  repositorio: 'https://github.com/GeovannaCassia/Projeto-de-Business-Intelligence---UBS-na-Regiao-de-Betim',
+  repositorio: 'https://github.com/Itsanthonnyz/Projeto-de-Business-Intelligence---UBS-na-Regiao-de-Betim',
 }
 
 export const PROJETO = {
