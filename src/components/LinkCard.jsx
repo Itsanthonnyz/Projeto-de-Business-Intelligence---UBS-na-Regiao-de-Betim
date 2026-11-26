@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import { IconExternal, IconEye } from './Icons.jsx'
+import { IconExternal, IconEye, IconDownload, IconInfo } from './Icons.jsx'
 
 /**
  * Card de acesso a um recurso externo (Power BI / ArcGIS).
  * Se `url` estiver vazio, mostra um estado "link em breve".
  * O botão "Visualizar aqui" incorpora o recurso em um iframe.
  */
-export default function LinkCard({ id, icon: Icon, tag, titulo, descricao, url, cta, itens, variante }) {
+export default function LinkCard({ id, icon: Icon, tag, titulo, descricao, url, cta, itens, variante, download, aviso, incorporavel = true }) {
   const [aberto, setAberto] = useState(false)
   const disponivel = Boolean(url)
 
   return (
+    <div className="link-card-wrap">
     <article id={id} className={`link-card link-card--${variante}`}>
       <div className="link-card__head">
         <span className="link-card__icon"><Icon /></span>
@@ -30,20 +31,34 @@ export default function LinkCard({ id, icon: Icon, tag, titulo, descricao, url, 
             <a className="btn btn--primary" href={url} target="_blank" rel="noopener noreferrer">
               {cta} <IconExternal />
             </a>
-            <button className="btn btn--ghost" onClick={() => setAberto((v) => !v)} aria-expanded={aberto}>
-              <IconEye /> {aberto ? 'Ocultar' : 'Visualizar aqui'}
-            </button>
+            {incorporavel && (
+              <button className="btn btn--ghost" onClick={() => setAberto((v) => !v)} aria-expanded={aberto}>
+                <IconEye /> {aberto ? 'Ocultar' : 'Visualizar aqui'}
+              </button>
+            )}
+            {download && (
+              <a className="btn btn--ghost" href={download} download>
+                <IconDownload /> Baixar arquivo
+              </a>
+            )}
           </>
         ) : (
           <span className="btn btn--disabled" aria-disabled="true">Link em breve</span>
         )}
       </div>
 
-      {disponivel && aberto && (
-        <div className="embed">
-          <iframe src={url} title={titulo} loading="lazy" allowFullScreen />
+      </article>
+
+      {(aviso || (disponivel && incorporavel && aberto)) && (
+        <div className="link-card__extra">
+          {aviso && <p className="link-card__aviso"><IconInfo /> {aviso}</p>}
+          {disponivel && incorporavel && aberto && (
+            <div className="embed">
+              <iframe src={url} title={titulo} loading="lazy" allowFullScreen />
+            </div>
+          )}
         </div>
       )}
-    </article>
+    </div>
   )
 }

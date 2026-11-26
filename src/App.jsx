@@ -134,6 +134,9 @@ export default function App() {
               itens={['Procedimentos por unidade e regional', 'Profissionais e consultórios por UBS', 'Oferta de serviços e avaliação no Google']}
               url={LINKS.powerBI}
               cta="Abrir no Power BI"
+              download={LINKS.powerBIArquivo}
+              incorporavel={false}
+              aviso="O acesso ao painel online só é possível com e-mail institucional da PUC Minas."
             />
             <LinkCard
               id="arcgis"

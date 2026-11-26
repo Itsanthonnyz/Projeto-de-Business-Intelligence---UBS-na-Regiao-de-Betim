@@ -37,3 +37,9 @@ export const IconEye = (p) => (
 export const IconCross = (p) => (
   <svg viewBox="0 0 24 24" width={24} height={24} aria-hidden {...p}><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z" fill="currentColor" /></svg>
 )
+export const IconDownload = (p) => (
+  <svg {...base} {...p}><path d="M12 4v11" /><path d="m7 10 5 5 5-5" /><path d="M5 20h14" /></svg>
+)
+export const IconInfo = (p) => (
+  <svg {...base} {...p}><circle cx="12" cy="12" r="9" /><path d="M12 11v5" /><path d="M12 8h.01" /></svg>
+)
