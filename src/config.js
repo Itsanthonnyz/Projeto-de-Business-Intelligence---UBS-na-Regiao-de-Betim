@@ -7,8 +7,8 @@ export const LINKS = {
   // Para incorporar (embed), use o link "Publicar na Web" (app.powerbi.com/view?r=...)
   powerBI: 'https://app.powerbi.com/reportEmbed?reportId=96d9aff5-f65a-41b8-8008-108f3e4d64fd&autoAuth=true&ctid=5e2a8164-87b6-430b-ac6b-08d6229e7059',
 
-  // Arquivo .pbix para download. Coloque o arquivo em /public com este mesmo nome.
-  powerBIArquivo: '/dashboard-ubs-betim.pbix',
+  // Arquivo .pbix para download. Fica em /public; caminho relativo (sem / inicial) por causa do base './'.
+  powerBIArquivo: 'BI_Unidades_Basicas_de_Saude_de_Betim.pbix',
 
   // Link público do mapa ArcGIS (ArcGIS Online / StoryMaps / Web App).
   arcGIS: 'https://www.arcgis.com/apps/instant/exhibit/index.html?appid=f77fc2dc73cf4335b82627ce79d1ea0d',
